@@ -4,6 +4,8 @@
 
 <!DOCTYPE html>
 <html ng-app>
+<!-- ng-app is used to tell Angular which parts of the page that it should manage -->
+<!-- ng-app will manage the entire page as it is put within the html tag -->
 <head>
 
 <script src="angular.js"></script>
@@ -13,14 +15,21 @@
 </head>
 
 <body ng-controller='CartController'>
+<!-- ng-controller is a linked javascript class. Everything that is declared at CartController will manage everything between the body tags -->
   <h2>Below is your basket</h2>
 
   <div ng-repeat='item in items'>
+  <!-- ng-repeat will copy the DOM inside the div tag only once for every possible element in the array which is called 'items' in this case -->
+  <!-- there is also a set of property names which is called 'item'. -->
     <span>{{item.title}}</span>
+    <!-- {{item.title}} is read from the arrray. {{item.title}} itself will recieve the data that is stored in the array and insert the contents of that items title property into the DOM -->
     <input ng-model='item.quantity'>
+    <!-- ng.model will create a data binding between the input field itself and the value of item.quality -->
     <span>{{item.price | currency:"&pound"}}</span>
     <span>{{item.price * item.quantity | currency:"&pound"}}</span>
+    <!-- by having a pipe and the word 'currency', it will format the numbers into an American currency, I have changed it to British Pounds -->
     <button ng-click="remove($index)">Remove Item</button>
+    <!-- when the button is pressed, it calls a remove function (remove()). $index is passed in which contains the iteration number of ng-repeat so it knows which one to remove -->
   </div>
 
 </body>
