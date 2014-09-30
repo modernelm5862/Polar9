@@ -11,15 +11,11 @@
 
 <body>
     <div ng-controller='HelloController'>
+        <input ng-model='greeting.text' type="text" placeholder="Your Name">
 
         <!-- {{greeting.text}} should print out 'Hello' -->
         <!-- Format should look like 'Hello, World!' -->
-        <h1>{{greeting.text}}, World!</h1>
-
-        <!-- {{greeting2.text1}} should output out 'Hello' and {{greeting2.text2}} should output 'World!' -->
-        <!-- Format should look like 'Hello, World!' -->
-        <h1>{{greeting2.text1}}, {{greeting2.text2}}</h1>
-
+        <h1>Hello, {{greeting.text}}. Welcome to this webpage.</h1>
     </div>
 </body>
 
