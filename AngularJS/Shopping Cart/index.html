@@ -1,0 +1,27 @@
+<!-- Plans here are to make a ng-repeat to get information from an array and to also remove an item. -->
+<!-- The next plan is to make something that can add an item as well and have the grand total at the bottom -->
+<!-- Have an array that will check a number which will be connected to a product (very basic barcode ID) -->
+
+<!DOCTYPE html>
+<html ng-app>
+<head>
+
+<script src="angular.js"></script>
+<script src="main.js"></script>
+  <title>Shopping Cart Example</title>
+
+</head>
+
+<body ng-controller='CartController'>
+  <h2>Below is your basket</h2>
+
+  <div ng-repeat='item in items'>
+    <span>{{item.title}}</span>
+    <input ng-model='item.quantity'>
+    <span>{{item.price | currency:"&pound"}}</span>
+    <span>{{item.price * item.quantity | currency:"&pound"}}</span>
+    <button ng-click="remove($index)">Remove Item</button>
+  </div>
+
+</body>
+</html>
