@@ -1,0 +1,26 @@
+<!-- Hello World using Angular -->
+
+<!DOCTYPE html>
+
+<html ng-app> <!--make sure that the html has 'np-app' in it so that it can interact with AngularJS-->
+
+<head> <!--This is where the scripts are going to be put-->
+    <script src="angular.js"></script>
+    <script src="controller.js"></script>
+</head>
+
+<body>
+    <div ng-controller='HelloController'>
+
+        <!-- {{greeting.text}} should print out 'Hello' -->
+        <!-- Format should look like 'Hello, World!' -->
+        <h1>{{greeting.text}}, World!</h1>
+
+        <!-- {{greeting2.text1}} should output out 'Hello' and {{greeting2.text2}} should output 'World!' -->
+        <!-- Format should look like 'Hello, World!' -->
+        <h1>{{greeting2.text1}}, {{greeting2.text2}}</h1>
+
+    </div>
+</body>
+
+</html>
