@@ -1,0 +1,27 @@
+<!-- Hello World using Angular -->
+
+<!DOCTYPE html>
+
+<html ng-app> <!--make sure that the html has 'np-app' in it so that it can interact with AngularJS-->
+
+<head> <!--This is where the scripts are going to be put-->
+    <script src="angular.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <form name="checkboxform" ng-controller='checkboxController'>
+        Do you want to check this?: <input type="checkbox" ng-model="CheckBoxStatus1">
+        <p>{{CheckBoxStatus1}}</p>
+
+        Do you want to check this box instead?: <input type="checkbox" ng-model="CheckBoxStatus2">
+        <p>{{CheckBoxStatus2}}</p>
+
+        Magic Box: <input type="checkbox" ng-model="CheckBoxStatus3"
+        ng-true-value="'This checkbox has been checked'" ng-false-value="'This checkbox is un-checked'">
+        <!-- ng-true-value is taken for Angulars Website -->
+        <p>{{CheckBoxStatus3}}</p>
+    </form>
+</body>
+
+</html>
