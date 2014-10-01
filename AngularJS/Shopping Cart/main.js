@@ -9,7 +9,7 @@ function CartController($scope) {
 
     $scope.remove = function(index) {
         $scope.items.splice(index, 1);
-        // the remove function is screated so that it can be binded within the UI so this is added to $scope too. In this example, the remove() function can only delete items from the array. Because the list of divs are created with ng-repeat, they are data bound so the list will not have gaps in it when an item is removed. Also the remove() function is called everytime the button is clicked on.
+        // the remove function is created so that it can be binded within the UI so this is added to $scope too. In this example, the remove() function can only delete items from the array. Because the list of divs are created with ng-repeat, they are data bound so the list will not have gaps in it when an item is removed. Also the remove() function is called everytime the button is clicked on.
     }
 }
 console.log ("Hello");
