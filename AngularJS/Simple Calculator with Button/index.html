@@ -1,0 +1,24 @@
+<!-- Submitting a form with only a button -->
+
+<!DOCTYPE html>
+
+<html ng-app> <!--make sure that the html has 'np-app' in it so that it can interact with AngularJS-->
+
+<head> <!--This is where the scripts are going to be put-->
+    <script src="angular.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+<form ng-submit="requestFunding()" ng-controller="StartUpController">
+    Starting Amount: <input ng-change="computeNeeded()" ng-model="startingEstimate"> <br>
+    Recommended Amount: {{needed}} <br>
+    <button ng-click="requestFunding()">Calculate</button>
+    <button ng-click="resetAll()">Reset</button>
+
+</form>
+
+</body>
+
+</html>
