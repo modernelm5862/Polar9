@@ -1,0 +1,21 @@
+<!-- Hello World using Angular -->
+
+<!DOCTYPE html>
+
+<html ng-app> <!--make sure that the html has 'np-app' in it so that it can interact with AngularJS-->
+
+<head> <!--This is where the scripts are going to be put-->
+    <script src="angular.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+<form ng-controller="StartUpController">
+    Starting Amount: <input ng-model="funding.startingEstimate"> <br>
+    Recommended Amount: {{funding.needed}}
+</form>
+
+</body>
+
+</html>
