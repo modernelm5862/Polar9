@@ -1,0 +1,23 @@
+<!-- Book Library -->
+
+<!DOCTYPE html>
+
+<html ng-app> <!--make sure that the html has 'np-app' in it so that it can interact with AngularJS-->
+
+<head> <!--This is where the scripts are going to be put-->
+    <script src="angular.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body ng-controller='BookListController'>
+    <ul>
+        <li ng-repeat="book in books">
+            <a href='/book/view/{{book.id}}'>{{book.name}}></a>
+        </li>
+    </ul>
+
+    <button ng-click="insertBook()">Insert New Book</button>
+    <button ng-click="remove($index)">Remove Book</button>
+</body>
+
+</html>
